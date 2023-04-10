@@ -56,10 +56,9 @@ class Fenster(QMainWindow):
         quit.triggered.connect(self.schliessen)
 
        
-
     def speichern(self):
         file = open('output.csv', 'w', encoding='utf-8')        
-        writer = csv.writer(file, delimiter=',')
+        writer = csv.writer(file, delimiter = ',')
         writer.writerow([self.vorname.text(), 
                 self.name.text(), 
                 self.gdatum.date().toString('dd.MM.yyyy'), 
